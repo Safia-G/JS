@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>mdp1</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+    var count = 2;
+    var faux = 0;
+
+function validate() {
+  console.log(faux);
+
+var identifiant = document.myform.identifiant.value;
+var password = document.myform.password.value;
+if (identifiant == "joe@gmail.com" && password == 12345) {
+  alert ("Bienvenue");
+  return false;
+}
+if (identifiant == "titi@gmail.com" && password == 54321) {
+  alert ("Bienvenue");
+  return false;
+}
+if (identifiant == "toto@gmail.com" && password == 123) {
+  alert ("Bienvenue");
+  return false;
+}
+else {
+  faux++;
+  console.log(faux);
+  alert("Identifiant ou mot de passe incorrect, veuillez recommencer la saisie.");
+  if(faux >3) {
+    alert("Vous avez atteint les 3 essais!" );
+}
+}
+
+if(document.myform.identifiant.value.indexOf('@') == -1) {
+alert("Il y a une erreur dans votre adresse électronique!");
+document.myform.identifiant.focus();
+return false;
+}
+}
+    </script>
+    <form name = "myform" onsubmit="validate(); return false">
+<p>Entrez votre nom d'utilisateur : <input type="text" name="identifiant"> Entrez votre mot de passe : <input type="password" name="password">
+<input type="submit" value="Cliquez pour valider" name="Submit">
+</p>
+
+</form>
+  </body>
+</html>

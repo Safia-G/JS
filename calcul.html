@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Calcul Mental</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+      function deviner() {
+        var opeArr = ["+", "-", "*"];
+        var ope = opeArr[Math.round(Math.random() * opeArr.length)];
+        var n1 = Math.floor((Math.random() * 10) +1);
+        var n2 = Math.floor((Math.random() * 10) +1);
+        var quest = prompt("Combien font " + n1 + ope + n2 + " ?");
+        var rep;
+
+n1 = parseInt(n1, 10);
+n2 = parseInt(n2, 10);
+
+switch (ope) {
+  case "+":
+    rep = n1 + n2;
+    break;
+    case "-":
+      rep = n1 - n2;
+      break;
+      case "*":
+        rep = n1 * n2;
+        break;
+  default:
+}
+if(quest == rep) {
+  alert("Bravo vous avez trouvé le bon résultat");
+}
+else {
+  alert("C'est faux réessayez!")
+}
+      }
+
+      deviner()
+    </script>
+  </body>
+</html>

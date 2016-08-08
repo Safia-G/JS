@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Calculette</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+    function calculer() {
+
+      var c1 = prompt ("Entrez un premier chiffre")
+      var ope = prompt(" Entrez un symbole : +, -, /, *")
+      var c2 = prompt ("Entrez un second chiffre")
+      var reponse;
+
+      c1 = parseInt(c1, 10);
+      c2 = parseInt(c2, 10);
+
+        switch (ope) {
+          case "+" :
+            reponse = c1 + c2;
+            break;
+            case "/" :
+              reponse = c1 / c2;
+              break;
+              case "-" :
+                reponse = c1 - c2;
+                break;
+                case "*" :
+                  reponse = c1 * c2;
+                  break;
+          default:
+
+        }
+          alert(reponse)
+      }
+      calculer();
+    </script>
+  </body>
+</html>
